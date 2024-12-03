@@ -63,13 +63,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 
-###Pictures
-![dispatchhhhhhhhhh](https://github.com/user-attachments/assets/c5f75c04-e9ca-40aa-8158-73a5e7e6b9ce)
-![marya](https://github.com/user-attachments/assets/99eae540-93ce-43f2-9ca1-a4f935765746)
-![sataeeeeeeee](https://github.com/user-attachments/assets/af6672dd-4c10-4943-96a7-7e6166a5eed2)
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Pictures
+
+![dispatchhhhhhhhhh](https://github.com/user-attachments/assets/c5f75c04-e9ca-40aa-8158-73a5e7e6b9ce)
+![marya](https://github.com/user-attachments/assets/99eae540-93ce-43f2-9ca1-a4f935765746)
+![sataeeeeeeee](https://github.com/user-attachments/assets/af6672dd-4c10-4943-96a7-7e6166a5eed2)
