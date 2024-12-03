@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState, createContext, useContext, useReducer} from 'react';
+import Login from './components/Login';
+import Header from './components/Header';
+import CreatePost from './components/CreatePost';
+import PostList from './components/PostList';
+import postReducer from './postReducer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+export const UserContext = createContext();
+
+export const PostContext = createContext({
+  posts: [],
+
+});
+const App = () => {
+ 
+  const [user, setUser] = useState ("");
+
+ 
+
+  // const [posts, setPosts] = useState ([]);
+
+  const initialPostState =  useContext(PostContext);
+
+  const [state, dispatch] = useReducer(postReducer, initialPostState);
+
+useEffect(() => {
+
+  document.title = user ? `${user}'s feed` : "please login";
+},[user]);
+
+  if(!user) return <Login setUser = {setUser}/>
+    return (
+    <PostContext.Provider value={{state, dispatch}}>
+
+          <UserContext.Provider value={user}>
+          <Header  setUser= {setUser}/>
+          <CreatePost user={user}/>
+          <PostList posts={state.posts}/>    
+        </UserContext.Provider>
+    </PostContext.Provider>
+   
+    );
+  };
+  export default App;
